@@ -34,7 +34,19 @@ public class Calculadora {
                 double division = (double) numero1 / numero2;
                 System.out.println("La división es " + division);
             }
-            default -> System.out.println("Operación inválida");
+            case '%' -> {
+                // Operación modulo:
+                int modulo = numero1 % numero2;
+                System.out.println("El modulo es " + modulo);
+            }
+
+            case '^' -> {
+                // Operación elevar:
+                double elevado = Math.pow(numero1, numero2);
+                System.out.println("La potencia es: " + elevado);
+            }
+
+                default -> System.out.println("Operación inválida");
         }
     }
 }
